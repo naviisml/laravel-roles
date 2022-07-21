@@ -1,0 +1,22 @@
+{
+    "name": "naveldev/laravel-roles",
+    "description": "A laravel authentication extension for roles",
+    "version": "1.0.0-dev",
+    "minimum-stability": "dev",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Navi Ismail",
+            "email": "mailvoornavi@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Navel\\LaravelRoles\\": "src"
+        }
+    },
+    "require": {
+        "laravel/framework": "^9.0"
+    }
+}
