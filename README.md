@@ -25,7 +25,7 @@ In `config/app.php`
         /*
          * Package Service Providers...
          */
-        Navel\LaravelRoles\ServiceProvider::class,
+        Naviisml\Laravel\Roles\ServiceProvider::class,
     ],
 ```
 
@@ -50,7 +50,7 @@ php artisan migrate
 ```
 
 ```cmd
-php artisan db:seed --class=\Navel\LaravelRoles\Database\Seeders\RoleSeeder
+php artisan db:seed --class=\Naviisml\Laravel\Roles\Database\Seeders\RoleSeeder
 ```
 
 ## Development

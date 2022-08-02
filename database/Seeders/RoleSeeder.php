@@ -1,10 +1,10 @@
 <?php
 
-namespace Navel\LaravelRoles\Database\Seeders;
+namespace Naviisml\Laravel\Roles\Database\Seeders;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Seeder;
-use Navel\LaravelRoles\Models\Role;
+use Naviisml\Laravel\Roles\Models\Role;
 
 class RoleSeeder extends Seeder
 {

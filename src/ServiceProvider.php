@@ -1,6 +1,6 @@
 <?php
 
-namespace Navel\LaravelRoles;
+namespace Naviisml\Laravel\Roles;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
