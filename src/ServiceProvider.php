@@ -18,6 +18,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->loadMigrations();
         $this->publishResources();
+        $this->registerCommands();
     }
 
     /**
@@ -48,6 +49,16 @@ class ServiceProvider extends BaseServiceProvider
         $this->publishes([
             __DIR__ . '/../resources' => base_path('/resources'),
         ], 'laravel-roles-resources');
+    }
+
+    protected function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Naviisml\Laravel\Roles\Commands\RoleAssign::class,
+                \Naviisml\Laravel\Roles\Commands\RoleRemove::class,
+            ]);
+        }
     }
 
     /**

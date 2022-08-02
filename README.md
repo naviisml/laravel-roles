@@ -5,18 +5,28 @@
 ## Installation
 
 ```composer
-composer install naveldev/laravel-roles
+composer install naviisml/laravel-roles
 ```
 
-```cmd
-php artisan vendor:publish --tag=laravel-roles-resources --force
+## Usage
+
+**Add a role to a user**
+
+```
+php artisan role:assign <optional:user_id>
 ```
 
-## FAQ
+**Remove a role from a user**
+
+```
+php artisan role:unassign <optional:user_id>
+```
+
+## Commands
 
 **Provider**
 
-In `config/app.php`
+In `config/app.php` add
 
 ```php
     'providers' => [
@@ -31,13 +41,19 @@ In `config/app.php`
 
 **Assets**
 
+_Publish the migrations_
+
 ```cmd
 php artisan vendor:publish --tag=laravel-roles-migrations --force
 ```
 
+_Publish the seeders_
+
 ```cmd
 php artisan vendor:publish --tag=laravel-roles-seeders --force
 ```
+
+_Publish the resources_
 
 ```cmd
 php artisan vendor:publish --tag=laravel-roles-resources --force
@@ -45,9 +61,13 @@ php artisan vendor:publish --tag=laravel-roles-resources --force
 
 **Database**
 
+_Execute the migrations_
+
 ```cmd
 php artisan migrate
 ```
+
+_Seed the database with the default `@default`, `@admin` and `@banned` roles_
 
 ```cmd
 php artisan db:seed --class=\Naviisml\Laravel\Roles\Database\Seeders\RoleSeeder
@@ -76,3 +96,4 @@ php artisan db:seed --class=\Naviisml\Laravel\Roles\Database\Seeders\RoleSeeder
 		"naveldev/laravel-roles": "^1.0.0"
 	}
 ```
+
