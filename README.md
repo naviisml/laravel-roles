@@ -16,6 +16,29 @@ composer install naviisml/laravel-roles
 php artisan role:assign <optional:user_id>
 ```
 
+In `config/roles.php`
+
+```
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default Role
+    |--------------------------------------------------------------------------
+    |
+    | ...
+    |
+    */
+
+	'default' => [
+		'name' => 'User',
+		'tag' => '@default'
+	]
+];
+```
+
 **Remove a role from a user**
 
 ```
