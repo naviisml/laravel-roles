@@ -2,7 +2,58 @@
 
 ...
 
-# Local Repository
+## Installation
+
+```composer
+composer install naveldev/laravel-roles
+```
+
+```cmd
+php artisan vendor:publish --tag=laravel-roles-resources --force
+```
+
+## FAQ
+
+**Provider**
+
+In `config/app.php`
+
+```php
+    'providers' => [
+        // ...
+        
+        /*
+         * Package Service Providers...
+         */
+        Navel\LaravelRoles\ServiceProvider::class,
+    ],
+```
+
+**Assets**
+
+```cmd
+php artisan vendor:publish --tag=laravel-roles-migrations --force
+```
+
+```cmd
+php artisan vendor:publish --tag=laravel-roles-seeders --force
+```
+
+```cmd
+php artisan vendor:publish --tag=laravel-roles-resources --force
+```
+
+**Database**
+
+```cmd
+php artisan migrate
+```
+
+```cmd
+php artisan db:seed --class=\Navel\LaravelRoles\Database\Seeders\RoleSeeder
+```
+
+## Development
 
 **Import**
 
