@@ -33,7 +33,8 @@ return [
                 'user.user-logs' => true,
                 'user.edit-profile' => true,
                 'user.edit-password' => true
-            ]
+            ],
+            'default' => true
         ],
         [
             'name' => 'Admin',

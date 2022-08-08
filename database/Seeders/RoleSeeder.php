@@ -26,7 +26,12 @@ class RoleSeeder extends Seeder
         $roles = config('roles.roles');
 
         foreach ($roles as $key => $role) {
-            echo $role->name;
+            $name = $role['name'];
+            $tag = $role['tag'];
+            $permissions = $role['permissions'] ?? [];
+            $default = ($role['default'] ?? false);
+
+            $this->createRole($name, $tag, $permissions, ($override = $key + 1), $default);
         }
 	}
 
@@ -55,6 +60,7 @@ class RoleSeeder extends Seeder
 		$name = strtolower($name);
 
 		$validator = $this->validator(['name' => $name]);
+
 		if ($validator->fails()) {
 			throw new \Exception($validator);
 		}
