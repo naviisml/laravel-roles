@@ -1,11 +1,11 @@
 <?php
 
-namespace Naviisml\Laravel\Roles\Traits;
+namespace Naviisml\Roles\Traits;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
-use Naviisml\Laravel\Roles\Models\UserRole;
+use Naviisml\Roles\Models\UserRole;
 
 trait Role
 {

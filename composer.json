@@ -13,7 +13,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Naviisml\\Laravel\\Roles\\": "src/"
+            "Naviisml\\Roles\\Database\\Seeders\\": "database/seeders/",
+            "Naviisml\\Roles\\": "src/"
         }
     },
     "require": {

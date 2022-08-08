@@ -1,6 +1,6 @@
 <?php
 
-namespace Naviisml\Laravel\Roles;
+namespace Naviisml\Roles;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -32,11 +32,9 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->publishes([
             __DIR__ . '/../database/migrations' => base_path('/database/migrations'),
-        ], 'laravel-roles-migrations');
-
-        $this->publishes([
-            __DIR__ . '/../database/Seeders' => base_path('/database/seeders'),
-        ], 'laravel-roles-seeders');
+            __DIR__ . '/../database/seeders' => base_path('/database/seeders'),
+            __DIR__ . '/../config' => base_path('/config'),
+        ], 'laravel-roles');
     }
 
     /**
@@ -55,8 +53,8 @@ class ServiceProvider extends BaseServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \Naviisml\Laravel\Roles\Commands\RoleAssign::class,
-                \Naviisml\Laravel\Roles\Commands\RoleRemove::class,
+                \Naviisml\Roles\Commands\RoleAssign::class,
+                \Naviisml\Roles\Commands\RoleRemove::class,
             ]);
         }
     }

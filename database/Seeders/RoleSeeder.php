@@ -1,10 +1,10 @@
 <?php
 
-namespace Naviisml\Laravel\Roles\Database\Seeders;
+namespace Naviisml\Roles\Database\Seeders;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Seeder;
-use Naviisml\Laravel\Roles\Models\Role;
+use Naviisml\Roles\Models\Role;
 
 class RoleSeeder extends Seeder
 {
@@ -23,32 +23,11 @@ class RoleSeeder extends Seeder
      */
 	protected function createDefaultRoles()
 	{
-		// The default role
-		$this->createRole(config('roles.default.name'), config('roles.default.tag'), [
-			'interact' => true,
-			'user.user-logs' => true,
-			'user.edit-profile' => true,
-			'user.edit-password' => true
-		], 1, true);
+        $roles = config('roles.roles');
 
-		// The admin role
-		$this->createRole('Admin', '@admin', [
-			'admin' => true,
-			'admin.users' => true,
-			'admin.user.get' => true,
-			'admin.user.edit' => true,
-			'admin.user.roles' => true,
-			'admin.user.roles.assign' => true,
-			'admin.user.roles.delete' => true,
-			'admin.user.logs' => true,
-			'admin.roles' => true,
-			'admin.role.edit' => true,
-		], 100);
-
-		// The banned role
-		$this->createRole('Banned', '@banned', [
-			'interact' => false
-		], 1000);
+        foreach ($roles as $key => $role) {
+            echo $role->name;
+        }
 	}
 
 	/**

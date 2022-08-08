@@ -1,10 +1,10 @@
 <?php
 
-namespace Naviisml\Laravel\Roles\Commands;
+namespace Naviisml\Roles\Commands;
 
 use Illuminate\Console\Command;
-use Naviisml\Laravel\Roles\Models\UserRole;
-use Naviisml\Laravel\Roles\Models\Role;
+use Naviisml\Roles\Models\UserRole;
+use Naviisml\Roles\Models\Role;
 use App\Models\User;
 
 class RoleAssign extends Command

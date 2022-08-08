@@ -1,6 +1,6 @@
 <?php
 
-namespace Naviisml\Laravel\Roles\Models;
+namespace Naviisml\Roles\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
